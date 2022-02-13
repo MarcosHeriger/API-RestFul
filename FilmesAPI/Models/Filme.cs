@@ -8,6 +8,8 @@ namespace FilmesAPI.Models
 {
     public class Filme
     {
+        public int Id { get; set; }
+
         [Required (ErrorMessage = "O Campo Titulo é obrigatório")]
         [StringLength(200, ErrorMessage = "Length 200")]
         public string Titulo { get; set; }
@@ -23,6 +25,5 @@ namespace FilmesAPI.Models
         [Required(ErrorMessage = "O Campo Duracao é obrigatório")]
         [Range(1,600, ErrorMessage ="Fora do Range Permitido")]
         public int Duracao { get; set; }
-
     }
 }
